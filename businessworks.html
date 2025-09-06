@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NTG Business Works</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black url('logo.jpg') no-repeat center center;
+      background-size: 300px;
+      font-family: monospace;
+      color: #00ff00;
+    }
+    .work-box {
+      width: 95%;
+      max-width: 1000px;
+      background: rgba(0,0,0,0.9);
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 25px #00ff00;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+    h2 {
+      color: #00ff00;
+      text-align: center;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #00ccff;
+      border-bottom: 1px solid #00ff00;
+      padding-bottom: 5px;
+    }
+    .item {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #00ff00;
+      border-radius: 6px;
+    }
+    .price {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+      background: #00ff00;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #00cc00;
+    }
+    .sold {
+      background: #ff3333;
+      color: white;
+    }
+    .sold:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="work-box">
+    <h2>💼 NTG Business Works</h2>
+
+    <!-- Suits -->
+    <h3>👔 Suits</h3>
+    <div class="item">Suit: Classic Black Suit <br> Price: <span class="price">₱3,500</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Navy Blue Formal Suit <br> Price: <span class="price">₱4,200</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Gray Business Suit <br> Price: <span class="price">₱3,800</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Pinstripe Suit <br> Price: <span class="price">₱4,500</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: White Formal Suit <br> Price: <span class="price">₱4,000</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Slim Fit Black Suit <br> Price: <span class="price">₱3,900</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Brown Business Suit <br> Price: <span class="price">₱4,100</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Tuxedo Black Suit <br> Price: <span class="price">₱5,000</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Beige Formal Suit <br> Price: <span class="price">₱3,700</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Suit: Maroon Slim Fit Suit <br> Price: <span class="price">₱4,600</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+
+    <!-- Watches -->
+    <h3>⌚ Watches (Affordable PH Brands)</h3>
+    <div class="item">Watch: Q&Q Analog Watch <br> Price: <span class="price">₱850</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Skmei Digital Watch <br> Price: <span class="price">₱650</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Casio F-91W Classic <br> Price: <span class="price">₱1,200</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Timex Easy Reader <br> Price: <span class="price">₱1,500</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Seiko 5 Automatic <br> Price: <span class="price">₱3,200</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Naviforce Casual <br> Price: <span class="price">₱1,100</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Curren Quartz <br> Price: <span class="price">₱900</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Lorus Men’s Watch <br> Price: <span class="price">₱1,800</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Romanson Classic <br> Price: <span class="price">₱2,700</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Watch: Orient Quartz <br> Price: <span class="price">₱2,900</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+
+    <!-- Leather Shoes -->
+    <h3>👞 Leather Shoes</h3>
+    <div class="item">Shoes: Black Derby Shoes <br> Price: <span class="price">₱2,500</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Brown Oxford Shoes <br> Price: <span class="price">₱2,700</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Black Monk Strap <br> Price: <span class="price">₱3,000</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Brown Loafers <br> Price: <span class="price">₱2,400</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Black Captoe Oxford <br> Price: <span class="price">₱3,200</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Brown Brogues <br> Price: <span class="price">₱2,800</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Black Chelsea Boots <br> Price: <span class="price">₱3,500</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Brown Derby Shoes <br> Price: <span class="price">₱2,600</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Black Formal Lace-up <br> Price: <span class="price">₱2,900</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+    <div class="item">Shoes: Brown Leather Boots <br> Price: <span class="price">₱3,300</span><br>
+      <button onclick="sell(this)">▶ Start Selling</button>
+      <button class="sold" onclick="markSold(this)">✔ Sold</button>
+    </div>
+
+    <button onclick="window.location.href='worklist.html'">⬅ Back to Work List</button>
+    <button onclick="window.location.href='index.html'">🏠 Back to Dashboard</button>
+  </div>
+
+  <script>
+    function sell(btn) {
+      btn.parentElement.style.background = "rgba(0, 255, 0, 0.2)";
+      btn.parentElement.innerHTML += "<br><b>Status: Selling ▶</b>";
+    }
+    function markSold(btn) {
+      btn.parentElement.style.background = "rgba(255, 0, 0, 0.2)";
+      btn.parentElement.innerHTML += "<br><b>Status: Sold ✔</b>";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NTG Cyber Security Division</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black url('logo.jpg') no-repeat center center;
+      background-size: 300px;
+      font-family: monospace;
+      color: #00ff00;
+    }
+    .box {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      text-align: center;
+      width: 340px;
+      box-shadow: 0 0 20px #00ff00;
+    }
+    h2 {
+      margin-bottom: 20px;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      background: black;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      font-size: 14px;
+    }
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 10px #00ff00;
+    }
+    button {
+      margin-top: 15px;
+      width: 100%;
+      padding: 10px;
+      background: #00ff00;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #00cc00;
+    }
+    .link {
+      margin-top: 10px;
+      font-size: 13px;
+      cursor: pointer;
+      color: #00ff00;
+      text-decoration: underline;
+    }
+    .dashboard {
+      display: none;
+      width: 80%;
+      max-width: 800px;
+      background: rgba(0,0,0,0.9);
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 25px #00ff00;
+    }
+    .terminal {
+      background: black;
+      padding: 15px;
+      border: 1px solid #00ff00;
+      margin-bottom: 20px;
+      height: 200px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      text-align: left;
+      font-size: 14px;
+    }
+    .signout {
+      margin-top: 20px;
+      padding: 8px 16px;
+      background: #ff0000;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .signout:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <!-- LOGIN -->
+  <div class="box" id="login-box">
+    <h2>🔐 NTG CYBER SECURITY DIVISION</h2>
+    <input type="text" id="login-user" placeholder="Code Number">
+    <input type="password" id="login-pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="link" onclick="showSignup()">Create Account</div>
+  </div>
+
+  <!-- SIGN UP -->
+  <div class="box" id="signup-box" style="display:none;">
+    <h2>📝 Create Account</h2>
+    <input type="text" id="signup-user" placeholder="Code Number">
+    <input type="password" id="signup-pass" placeholder="Password">
+    <button onclick="signup()">Sign Up</button>
+    <div class="link" onclick="showLogin()">Back to Login</div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard" id="dashboard">
+    <h2>⚡ NTG Cyber Security Dashboard ⚡</h2>
+    <div class="terminal" id="terminal"></div>
+    <button onclick="window.location.href='worklist.html'">📅 View Work List</button>
+    <button class="signout" onclick="signOut()">Sign Out</button>
+  </div>
+
+  <script>
+    // Temporary "database" stored in browser memory
+    let accounts = {};
+
+    function showSignup() {
+      document.getElementById("login-box").style.display = "none";
+      document.getElementById("signup-box").style.display = "block";
+    }
+    function showLogin() {
+      document.getElementById("signup-box").style.display = "none";
+      document.getElementById("login-box").style.display = "block";
+    }
+
+    function signup() {
+      const user = document.getElementById("signup-user").value;
+      const pass = document.getElementById("signup-pass").value;
+
+      if (user && pass) {
+        accounts[user] = pass;
+        alert("Account created! You can now log in.");
+        showLogin();
+      } else {
+        alert("Please enter a Code Number and Password.");
+      }
+    }
+
+    function login() {
+      const user = document.getElementById("login-user").value;
+      const pass = document.getElementById("login-pass").value;
+      const loginBox = document.getElementById("login-box");
+      const dashboard = document.getElementById("dashboard");
+      const terminal = document.getElementById("terminal");
+
+      if (accounts[user] && accounts[user] === pass) {
+        // Hide login, show dashboard
+        loginBox.style.display = "none";
+        dashboard.style.display = "block";
+
+        // Fake terminal typing
+        terminal.innerHTML = "";
+        const lines = [
+          "[ACCESS GRANTED]",
+          "Welcome  CODE #" + user + "...",
+          "Initializing NTG Systems...",
+          "Loading Secure Database...",
+          "[SYSTEM ONLINE] You are now connected."
+        ];
+        let i = 0;
+
+        function typeLine() {
+          if (i < lines.length) {
+            terminal.innerHTML += lines[i] + "\n";
+            terminal.scrollTop = terminal.scrollHeight;
+            i++;
+            setTimeout(typeLine, 800);
+          }
+        }
+        typeLine();
+      } else {
+        alert("Access Denied: Invalid credentials.");
+      }
+    }
+
+    function signOut() {
+      document.getElementById("dashboard").style.display = "none";
+      document.getElementById("login-box").style.display = "block";
+    }
+  </script>
+</body>
+</html>

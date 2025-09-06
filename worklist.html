@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NTG Work List</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black url('logo.jpg') no-repeat center center;
+      background-size: 300px;
+      font-family: monospace;
+      color: #00ff00;
+    }
+    .work-box {
+      width: 95%;
+      max-width: 900px;
+      background: rgba(0,0,0,0.9);
+      border: 2px solid #00ff00;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 25px #00ff00;
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+    h2 {
+      color: #00ff00;
+      text-align: center;
+    }
+    .job {
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #00ff00;
+      border-radius: 6px;
+    }
+    .pay {
+      color: #00ffcc;
+      font-weight: bold;
+    }
+    button {
+      margin: 5px;
+      padding: 6px 12px;
+      background: #00ff00;
+      border: none;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background: #00cc00;
+    }
+    .decline {
+      background: #ff3333;
+      color: white;
+    }
+    .decline:hover {
+      background: #cc0000;
+    }
+  </style>
+</head>
+<body>
+  <div class="work-box">
+    <h2>📋 NTG Cybersecurity Jobs</h2>
+
+    <!-- 10 Recovery Jobs -->
+    <div class="job">Client: Juan Dela Cruz <br> Task: Recover Facebook Account <br> Pay: <span class="pay">₱1,500</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Maria Santos <br> Task: Recover Google Account <br> Pay: <span class="pay">₱2,000</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Carlo Mendoza <br> Task: Recover Instagram Account <br> Pay: <span class="pay">₱1,800</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Ana Lopez <br> Task: Recover TikTok Account <br> Pay: <span class="pay">₱1,600</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Mark Reyes <br> Task: Recover Facebook Account <br> Pay: <span class="pay">₱1,700</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Liza Cruz <br> Task: Recover Google Account <br> Pay: <span class="pay">₱2,200</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Kevin Torres <br> Task: Recover Instagram Account <br> Pay: <span class="pay">₱1,900</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Sofia Ramos <br> Task: Recover TikTok Account <br> Pay: <span class="pay">₱1,650</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Daniel Garcia <br> Task: Recover Facebook Account <br> Pay: <span class="pay">₱1,750</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Katrina Villanueva <br> Task: Recover Google Account <br> Pay: <span class="pay">₱2,300</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+
+    <!-- 10 Tracing Jobs -->
+    <div class="job">Client: Pedro Cruz <br> Task: Trace Missing Person <br> Pay: <span class="pay">₱5,000</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Andrea Bautista <br> Task: Trace Online Scammer <br> Pay: <span class="pay">₱4,500</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Miguel Torres <br> Task: Trace Location of Person <br> Pay: <span class="pay">₱4,000</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Jenny Cruz <br> Task: Trace Lost Relative <br> Pay: <span class="pay">₱6,000</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Paolo Diaz <br> Task: Trace Online Harasser <br> Pay: <span class="pay">₱4,800</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Rica Flores <br> Task: Trace Unknown Caller <br> Pay: <span class="pay">₱4,200</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Jose Ramirez <br> Task: Trace Online Impostor <br> Pay: <span class="pay">₱5,200</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Angelica Mercado <br> Task: Trace Debt Collector <br> Pay: <span class="pay">₱4,600</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Ramon Aquino <br> Task: Trace Blackmailer <br> Pay: <span class="pay">₱6,500</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+    <div class="job">Client: Bianca Fernandez <br> Task: Trace Online Bully <br> Pay: <span class="pay">₱4,300</span><br>
+      <button onclick="accept(this)">✅ Accept</button>
+      <button class="decline" onclick="decline(this)">❌ Decline</button>
+    </div>
+
+    <button onclick="window.location.href='index.html'">⬅ Back to Dashboard</button>
+    <button onclick="window.location.href='businessworks.html'">💼 Business Works</button>
+  </div>
+
+  <script>
+    function accept(btn) {
+      btn.parentElement.style.background = "rgba(0, 255, 0, 0.2)";
+      btn.parentElement.innerHTML += "<br><b>Status: Accepted ✅</b>";
+    }
+    function decline(btn) {
+      btn.parentElement.style.background = "rgba(255, 0, 0, 0.2)";
+      btn.parentElement.innerHTML += "<br><b>Status: Declined ❌</b>";
+    }
+  </script>
+</body>
+</html>
